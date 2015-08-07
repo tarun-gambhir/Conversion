@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Unix Timestamp Conversion</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="lib/jquery.min.js"></script>
+		<script src="lib/jquery.scrolly.min.js"></script>
+		<script src="lib/skel.min.js"></script>
+		<script src="lib/moment.min.js"></script>
+
+		<script src="js/init.js"></script>
+		<script src="js/current.js"></script>
+		<script src="js/timeCalculations.js"></script>
+
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/extra.css" />
+		<link rel="stylesheet" href="css/style-desktop.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Top</a></li>
+					<li><a href="#time">Time Tools</a></li>
+					<li><a href="#date">Date Tools</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<div class="wrapper style1 first">
+				<article class="container" id="top">
+					<div class="row">
+						<div class="4u">
+							<span class="image fit"><img src="images/self.jpg" alt="" /></span>
+						</div>
+						<div class="8u">
+							<header>
+								<h1>Hi. I'm <strong>Tarun Gambhir</strong>.</h1>
+							</header>
+							<p>As a Web Developer, I often see myself using time and date conversions.
+								 This is a conversion tool that has helped me. Go ahead, Use it and Enjoy!
+							</p>
+							<a href="#socialContact" class="button big scrolly">Learn more about me</a>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- Time Tools -->
+			<div class="wrapper style2">
+				<article id="time">
+					<header>
+						<h2>The Current Timestamp is </h2>
+						<div id="currentTime"></div>
+					</header>
+					<div class="container">
+						<div class="">
+							<div class="fromTimestamp">
+								<span style="color: #335C33">Convert a Unix Timestamp to Human readable date</span>
+								<p>
+									<input type="number" style="width: 200px" id="timeInput" max="9999999999999999">
+									<button class="button toReadable">Convert to Human Readable Date</button>
+								</p>
+							</div>
+							
+							<div id="resultFromTimestamp" style="display:hidden">
+							</div>
+							<br>
+							<div class="toTimestampDiv">
+								<span style="color: #335C33">Convert Date to a Unix Timestamp</span>
+								<table>
+									<tr>
+										<td>MM</td>
+										<td>DD</td>
+										<td>YYYY</td>
+										<td>Hr</td>
+										<td>Min</td>
+										<td>Sec</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="number" name="month" min="1" max="12" maxlength="2" value="1">
+										</td>
+										<td>
+											<input type="number" name="day" min="1" max="31" maxlength="2" value="1">
+										</td>
+										<td>
+											<input type="number" name="year" min="1970" max="9999" maxlength="4" value="1970">
+										</td>
+										<td>
+											<input type="number" name="hour" min="0" max="23" maxlength="2" value="0">
+										</td>
+										<td>
+											<input type="number" name="minute" min="0" max="59" maxlength="2" value="0">
+										</td>
+										<td>
+											<input type="number" name="seconds" min="0" max="59" maxlength="2" value="0">
+										</td>
+										<td>
+											<select id="timezoneSelect">
+												<option value="gmt">GMT</option>
+												<option value="local">Local Time</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+								<span style="display: inline">
+								</span>
+								<button class="button" id="toTimeStamp">Convert to TimeStamp</button>
+							</div>
+							<br>
+							<div id="resultToTimestamp" style="display:hidden">
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- Date Tools -->
+			<div class="wrapper style3">
+				<article id="date">
+					<header>
+						<h2>Oops.</h2>
+					</header>
+					<div class="container">
+						<span style="display: inline-block; position: relative"><img src="images/underConstruction.jpg" alt="" style="height: 360px; width: 650px"/></span>
+					</div>
+				</article>
+			</div>
+
+		<!-- Contact --> 
+			<div class="wrapper style4">
+				<article id="contact" class="container small">
+					<header>
+						<h2>Have me make stuff for you.</h2>
+					</header>
+					<div>
+						<div class="row">
+							<div class="12u">
+								<form method="post" action="#">
+									<div>
+										<div class="row">
+											<div class="6u">
+												<input type="text" name="name" id="name" placeholder="Name" />
+											</div>
+											<div class="6u">
+												<input type="text" name="email" id="email" placeholder="Email" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="12u">
+												<input type="text" name="subject" id="subject" placeholder="Subject" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="12u">
+												<textarea name="message" id="message" placeholder="Message"></textarea>
+											</div>
+										</div>
+										<div class="row double">
+											<div class="12u">
+												<ul class="actions">
+													<li><input type="submit" value="Send Message" /></li>
+													<li><input type="reset" value="Clear Form" class="alt" /></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row" id="socialContact">
+							<div class="12u">
+								<hr />
+								<h3>Find me on ...</h3>
+								<ul class="social">
+									<li><a target="_blank" href="http://www.twitter.com/tarungambhir21" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a target="_blank" href="http://www.facebook.com/gambhirtarun" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a target="_blank" href="http://www.linkedin.com/in/tarungambhir/" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a target="_blank" href="http://plus.google.com/+TarunGambhir21/" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+								</ul>
+								<hr />
+							</div>
+						</div>
+					</div>
+					<footer>
+						<ul id="copyright">
+							<li>&copy; TarunGambhir. All rights reserved.</li>
+						</ul>
+					</footer>
+				</article>
+			</div>
+
+	</body>
+</html>
